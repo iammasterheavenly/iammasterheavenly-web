@@ -74,11 +74,11 @@ git init
 git add .
 git commit -m "Initial commit: I AM MASTER website"
 git branch -M main
-git remote add origin https://github.com/iammasterheavenly/iammasterheavenly.git
+git remote add origin https://github.com/iammasterheavenly/iammasterheavenly-web.git
 git push -u origin main
 ```
 
-(Create the empty `iammasterheavenly` repository on GitHub first, without a README.)
+(Create the empty `iammasterheavenly-web` repository on GitHub first, without a README.)
 
 ---
 
