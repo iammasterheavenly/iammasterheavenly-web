@@ -1,6 +1,7 @@
 import Navbar from "./components/Navbar.jsx";
 import Footer from "./components/Footer.jsx";
 import ScriptureBackdrop from "./components/ScriptureBackdrop.jsx";
+import WordOfTheDay from "./components/WordOfTheDay.jsx";
 import Home from "./pages/Home.jsx";
 
 export default function App() {
@@ -12,8 +13,10 @@ export default function App() {
 
   return (
     // `isolate` keeps the -z-10 backdrop inside this stacking context, behind the content.
+    // The backdrop is absolutely positioned over the full page height, so it scrolls with it.
     <div className="relative isolate flex min-h-screen flex-col">
       <ScriptureBackdrop />
+      <WordOfTheDay />
       <Navbar />
       <main className="flex-1">
         <Home />

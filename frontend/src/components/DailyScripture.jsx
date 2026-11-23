@@ -1,15 +1,9 @@
 import { useEffect, useState } from "react";
 import { API_URL } from "../lib/api.js";
-import SCRIPTURES from "../data/scriptures.json";
-
-// Same rule as the backend: days since 1970-01-01 in South African time (UTC+2).
-function localPick() {
-  const day = Math.floor((Date.now() + 2 * 60 * 60 * 1000) / 86_400_000);
-  return { ...SCRIPTURES[day % SCRIPTURES.length], translation: "KJV" };
-}
+import { todaysVerse } from "../lib/scripture.js";
 
 export default function DailyScripture() {
-  const [verse, setVerse] = useState(localPick);
+  const [verse, setVerse] = useState(todaysVerse);
   const [copied, setCopied] = useState(false);
 
   useEffect(() => {

@@ -20,11 +20,10 @@
   --font-marker: "Permanent Marker", "Comic Sans MS", cursive;
 }
 
-/* Masonry-style collage columns that fill the viewport left to right */
+/* Masonry-style collage columns for the scripture board */
 .backdrop-columns {
   column-count: 2;
-  column-gap: 2rem;
-  column-fill: auto;
+  column-gap: 1rem;
 }
 @media (min-width: 640px) { .backdrop-columns { column-count: 3; } }
 @media (min-width: 1024px) { .backdrop-columns { column-count: 4; } }
