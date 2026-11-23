@@ -1,10 +1,11 @@
 import { useState } from "react";
 
 const LINKS = [
-  { href: "#home", label: "Home" },
-  { href: "#calculator", label: "Fuel Calculator" },
-  { href: "#releases", label: "Releases" },
-  { href: "#about", label: "About" },
+  { href: "#calculator", label: "Calculators" },
+  { href: "#scripture", label: "Scripture" },
+  { href: "#showcase", label: "Our Work" },
+  { href: "#ai", label: "AI Assistants" },
+  { href: "#ebooks", label: "E-Books" },
 ];
 
 export default function Navbar() {
@@ -25,7 +26,7 @@ export default function Navbar() {
           </span>
         </a>
 
-        <ul className="hidden items-center gap-8 text-sm md:flex">
+        <ul className="hidden items-center gap-6 text-sm lg:flex">
           {LINKS.map((link) => (
             <li key={link.href}>
               <a href={link.href} className="text-zinc-300 transition hover:text-gold">
@@ -37,7 +38,7 @@ export default function Navbar() {
 
         <button
           type="button"
-          className="rounded-md border border-edge p-2 text-zinc-300 md:hidden"
+          className="rounded-md border border-edge p-2 text-zinc-300 lg:hidden"
           aria-label="Toggle menu"
           aria-expanded={open}
           onClick={() => setOpen((v) => !v)}
@@ -53,7 +54,7 @@ export default function Navbar() {
       </nav>
 
       {open && (
-        <ul className="space-y-1 border-t border-edge px-4 pb-4 pt-2 md:hidden">
+        <ul className="space-y-1 border-t border-edge px-4 pb-4 pt-2 lg:hidden">
           {LINKS.map((link) => (
             <li key={link.href}>
               <a

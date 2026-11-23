@@ -1,6 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-
-const API_URL = (import.meta.env.VITE_API_URL || "http://localhost:8000").replace(/\/$/, "");
+import { API_URL, zar, toNumber } from "../lib/api.js";
 
 // Used immediately and kept if the free-tier backend is asleep or unreachable.
 const FALLBACK_PRICES = [
@@ -16,16 +15,6 @@ const VEHICLE_PRESETS = [
   { id: "suv", label: "SUV / Bakkie", consumption: 10.5 },
   { id: "custom", label: "Custom", consumption: null },
 ];
-
-const zar = new Intl.NumberFormat("en-ZA", {
-  minimumFractionDigits: 2,
-  maximumFractionDigits: 2,
-});
-
-const toNumber = (value) => {
-  const n = parseFloat(String(value).replace(",", "."));
-  return Number.isFinite(n) && n >= 0 ? n : 0;
-};
 
 export default function FuelCalculator() {
   const [prices, setPrices] = useState(FALLBACK_PRICES);
