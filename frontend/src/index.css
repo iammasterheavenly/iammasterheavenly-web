@@ -7,8 +7,29 @@
   --color-gold: #f5c542;
   --color-gold-dim: #b8922c;
   --color-violet: #8b5cf6;
+  --color-charcoal: #18181c;
   --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+
+  /* Scripture collage fonts (loaded from Google Fonts in index.html) */
+  --font-serif: "Playfair Display", Georgia, "Times New Roman", serif;
+  --font-display: "Bebas Neue", Impact, sans-serif;
+  --font-anton: "Anton", Impact, sans-serif;
+  --font-wide: "Montserrat", ui-sans-serif, system-ui, sans-serif;
+  --font-script: "Caveat", "Segoe Script", cursive;
+  --font-brush: "Kaushan Script", "Segoe Script", cursive;
+  --font-marker: "Permanent Marker", "Comic Sans MS", cursive;
 }
+
+/* Masonry-style collage columns that fill the viewport left to right */
+.backdrop-columns {
+  column-count: 2;
+  column-gap: 2rem;
+  column-fill: auto;
+}
+@media (min-width: 640px) { .backdrop-columns { column-count: 3; } }
+@media (min-width: 1024px) { .backdrop-columns { column-count: 4; } }
+@media (min-width: 1280px) { .backdrop-columns { column-count: 5; } }
+@media (min-width: 1700px) { .backdrop-columns { column-count: 6; } }
 
 html {
   scroll-behavior: smooth;
