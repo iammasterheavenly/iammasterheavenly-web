@@ -130,7 +130,7 @@ export default function FuelCalculator() {
               </div>
             </div>
             <p className="mt-2 text-xs text-zinc-500">
-              Approximate manufacturer figure — real-world use is often 10–20% higher. Adjust it to match your car.
+              Approximate official figure — real-world use varies (trucks depend heavily on load). Adjust it to match your vehicle.
             </p>
           </div>
 
@@ -229,13 +229,50 @@ export default function FuelCalculator() {
   );
 }
 
+const TYPE_LABEL = { car: "Car", suv: "SUV", van: "Van", truck: "Truck / bakkie" };
+
 function VehicleSearch({ selected, onSelect }) {
   const [query, setQuery] = useState("");
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState(0);
+  const [remote, setRemote] = useState(null); // { q, results, total, makes, loading }
+  const [searching, setSearching] = useState(false);
   const listId = useId();
   const box = useRef(null);
-  const results = useMemo(() => searchVehicles(query), [query]);
+  const local = useMemo(() => searchVehicles(query), [query]);
+
+  // Full search on the backend (50,000+ vehicles, refreshed daily), debounced.
+  useEffect(() => {
+    const q = query.trim();
+    if (q.length < 2) {
+      setRemote(null);
+      setSearching(false);
+      return;
+    }
+    setSearching(true);
+    const controller = new AbortController();
+    const timer = setTimeout(async () => {
+      try {
+        const res = await fetch(`${API_URL}/api/vehicles/search?q=${encodeURIComponent(q)}&limit=15`, {
+          signal: controller.signal,
+        });
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const data = await res.json();
+        setRemote({ q, ...data });
+      } catch {
+        /* keep local results */
+      } finally {
+        if (!controller.signal.aborted) setSearching(false);
+      }
+    }, 250);
+    return () => {
+      clearTimeout(timer);
+      controller.abort();
+    };
+  }, [query]);
+
+  const fromApi = remote && remote.q === query.trim() && Array.isArray(remote.results);
+  const results = (fromApi ? remote.results.map((v, i) => ({ ...v, id: `api-${i}-${v.name}-${v.years}` })) : local);
 
   useEffect(() => {
     const close = (e) => box.current && !box.current.contains(e.target) && setOpen(false);
@@ -253,7 +290,7 @@ function VehicleSearch({ selected, onSelect }) {
     if (!open || !results.length) return;
     if (e.key === "ArrowDown") { e.preventDefault(); setActive((a) => (a + 1) % results.length); }
     else if (e.key === "ArrowUp") { e.preventDefault(); setActive((a) => (a - 1 + results.length) % results.length); }
-    else if (e.key === "Enter") { e.preventDefault(); choose(results[active]); }
+    else if (e.key === "Enter") { e.preventDefault(); choose(results[active] ?? results[0]); }
     else if (e.key === "Escape") setOpen(false);
   };
 
@@ -276,23 +313,25 @@ function VehicleSearch({ selected, onSelect }) {
           onChange={(e) => { setQuery(e.target.value); setOpen(true); setActive(0); }}
           onFocus={() => query && setOpen(true)}
           onKeyDown={onKeyDown}
-          placeholder={selected ? `${selected.name} — search to change` : "Search make or model, e.g. Hilux, Polo, Swift"}
+          placeholder={selected ? `${selected.name} — search to change` : "Search any make or model, e.g. Hilux, Jaguar X-Type, Scania"}
           className={`${inputClass} pl-11`}
         />
       </div>
 
       {selected && (
         <p className="mt-2 inline-flex items-center gap-2 rounded-full border border-gold/40 bg-gold/10 px-3 py-1 text-xs text-gold">
-          {selected.name} · {selected.fuel} · ~{selected.l100} L/100km
+          {selected.name}{selected.years ? ` (${selected.years})` : ""} · {selected.fuel} · ~{selected.l100} L/100km
         </p>
       )}
 
       {open && query && (
         <ul id={listId} role="listbox"
-          className="absolute z-20 mt-2 max-h-80 w-full overflow-y-auto rounded-xl border border-edge bg-panel p-1 shadow-2xl shadow-black/60">
+          className="absolute z-20 mt-2 max-h-96 w-full overflow-y-auto rounded-xl border border-edge bg-panel p-1 shadow-2xl shadow-black/60">
           {results.length === 0 && (
             <li className="px-3 py-3 text-sm text-zinc-400">
-              No match — try the make only (e.g. "Toyota"), pick a "Generic" size, or type your consumption below.
+              {searching
+                ? "Searching all makes…"
+                : "No match — try just the make (e.g. \"Jaguar\"), pick a \"Generic\" size, or type your consumption below."}
             </li>
           )}
           {results.map((v, i) => (
@@ -302,15 +341,26 @@ function VehicleSearch({ selected, onSelect }) {
               className={`flex cursor-pointer items-center justify-between gap-3 rounded-lg px-3 py-2 text-sm ${
                 i === active ? "bg-gold/15 text-white" : "text-zinc-300"
               }`}>
-              <span>
+              <span className="min-w-0">
                 <span className="font-semibold">{v.make} {v.model}</span>{" "}
                 <span className="text-zinc-400">{v.engine}</span>
+                {v.years && <span className="text-zinc-500"> · {v.years}</span>}
               </span>
-              <span className="shrink-0 text-xs text-zinc-500">
+              <span className="shrink-0 text-right text-xs text-zinc-500">
                 {v.fuel === "diesel" ? "Diesel" : "Petrol"} · {v.l100} L
+                <span className="block text-[10px] uppercase tracking-wider text-zinc-600">
+                  {TYPE_LABEL[v.type] || "Car"}{v.source === "EPA" ? " · US EPA" : ""}
+                </span>
               </span>
             </li>
           ))}
+          <li className="border-t border-edge px-3 py-2 text-[11px] text-zinc-500">
+            {fromApi && remote.total
+              ? `Searching ${remote.total.toLocaleString("en-ZA")} vehicles from ${remote.makes} makes · updated daily`
+              : searching
+                ? "Searching all makes…"
+                : "Showing popular SA vehicles & trucks"}
+          </li>
         </ul>
       )}
     </div>

@@ -1,0 +1,1626 @@
+[
+    {
+        "make":  "Toyota",
+        "model":  "Hilux",
+        "engine":  "2.4 GD-6 manual",
+        "fuel":  "diesel",
+        "l100":  7.6
+    },
+    {
+        "make":  "Toyota",
+        "model":  "Hilux",
+        "engine":  "2.4 GD-6 auto",
+        "fuel":  "diesel",
+        "l100":  8
+    },
+    {
+        "make":  "Toyota",
+        "model":  "Hilux",
+        "engine":  "2.8 GD-6",
+        "fuel":  "diesel",
+        "l100":  8.5
+    },
+    {
+        "make":  "Toyota",
+        "model":  "Hilux",
+        "engine":  "2.7 VVT-i petrol",
+        "fuel":  "petrol",
+        "l100":  10.6
+    },
+    {
+        "make":  "Toyota",
+        "model":  "Hilux",
+        "engine":  "2.0 VVT-i single cab",
+        "fuel":  "petrol",
+        "l100":  9.3
+    },
+    {
+        "make":  "Toyota",
+        "model":  "Hilux (older)",
+        "engine":  "2.5 D-4D",
+        "fuel":  "diesel",
+        "l100":  8
+    },
+    {
+        "make":  "Toyota",
+        "model":  "Fortuner",
+        "engine":  "2.4 GD-6",
+        "fuel":  "diesel",
+        "l100":  7.6
+    },
+    {
+        "make":  "Toyota",
+        "model":  "Fortuner",
+        "engine":  "2.8 GD-6",
+        "fuel":  "diesel",
+        "l100":  8
+    },
+    {
+        "make":  "Toyota",
+        "model":  "Corolla Cross",
+        "engine":  "1.8 XS / XR",
+        "fuel":  "petrol",
+        "l100":  7.2
+    },
+    {
+        "make":  "Toyota",
+        "model":  "Corolla Cross",
+        "engine":  "1.8 Hybrid",
+        "fuel":  "petrol",
+        "l100":  4.3
+    },
+    {
+        "make":  "Toyota",
+        "model":  "Corolla",
+        "engine":  "2.0 sedan",
+        "fuel":  "petrol",
+        "l100":  6
+    },
+    {
+        "make":  "Toyota",
+        "model":  "Corolla Quest",
+        "engine":  "1.8",
+        "fuel":  "petrol",
+        "l100":  6.6
+    },
+    {
+        "make":  "Toyota",
+        "model":  "Starlet",
+        "engine":  "1.5",
+        "fuel":  "petrol",
+        "l100":  5.6
+    },
+    {
+        "make":  "Toyota",
+        "model":  "Vitz",
+        "engine":  "1.0",
+        "fuel":  "petrol",
+        "l100":  4.4
+    },
+    {
+        "make":  "Toyota",
+        "model":  "Agya",
+        "engine":  "1.0",
+        "fuel":  "petrol",
+        "l100":  4.6
+    },
+    {
+        "make":  "Toyota",
+        "model":  "Urban Cruiser",
+        "engine":  "1.5",
+        "fuel":  "petrol",
+        "l100":  6.2
+    },
+    {
+        "make":  "Toyota",
+        "model":  "Rumion",
+        "engine":  "1.5",
+        "fuel":  "petrol",
+        "l100":  6
+    },
+    {
+        "make":  "Toyota",
+        "model":  "Avanza / Veloz",
+        "engine":  "1.5",
+        "fuel":  "petrol",
+        "l100":  6.3
+    },
+    {
+        "make":  "Toyota",
+        "model":  "Yaris Cross",
+        "engine":  "1.5 Hybrid",
+        "fuel":  "petrol",
+        "l100":  3.8
+    },
+    {
+        "make":  "Toyota",
+        "model":  "RAV4",
+        "engine":  "2.0 CVT",
+        "fuel":  "petrol",
+        "l100":  6.9
+    },
+    {
+        "make":  "Toyota",
+        "model":  "Land Cruiser 79",
+        "engine":  "4.5 V8 D-4D",
+        "fuel":  "diesel",
+        "l100":  12
+    },
+    {
+        "make":  "Toyota",
+        "model":  "Land Cruiser Prado",
+        "engine":  "2.8 GD",
+        "fuel":  "diesel",
+        "l100":  8.4
+    },
+    {
+        "make":  "Toyota",
+        "model":  "Hiace / Ses\u0027fikile",
+        "engine":  "2.5 D-4D",
+        "fuel":  "diesel",
+        "l100":  9
+    },
+    {
+        "make":  "Toyota",
+        "model":  "Quantum",
+        "engine":  "2.8 GD-6",
+        "fuel":  "diesel",
+        "l100":  9
+    },
+    {
+        "make":  "Toyota",
+        "model":  "Quantum",
+        "engine":  "2.7 petrol",
+        "fuel":  "petrol",
+        "l100":  12
+    },
+    {
+        "make":  "Toyota",
+        "model":  "Tazz",
+        "engine":  "1.3",
+        "fuel":  "petrol",
+        "l100":  7.8
+    },
+    {
+        "make":  "Volkswagen",
+        "model":  "Polo Vivo",
+        "engine":  "1.4",
+        "fuel":  "petrol",
+        "l100":  5.8
+    },
+    {
+        "make":  "Volkswagen",
+        "model":  "Polo Vivo",
+        "engine":  "1.6",
+        "fuel":  "petrol",
+        "l100":  6.2
+    },
+    {
+        "make":  "Volkswagen",
+        "model":  "Polo Vivo GT",
+        "engine":  "1.0 TSI",
+        "fuel":  "petrol",
+        "l100":  5.4
+    },
+    {
+        "make":  "Volkswagen",
+        "model":  "Polo",
+        "engine":  "1.0 TSI",
+        "fuel":  "petrol",
+        "l100":  5.1
+    },
+    {
+        "make":  "Volkswagen",
+        "model":  "Polo GTI",
+        "engine":  "2.0 TSI",
+        "fuel":  "petrol",
+        "l100":  6.5
+    },
+    {
+        "make":  "Volkswagen",
+        "model":  "Citi Golf",
+        "engine":  "1.4",
+        "fuel":  "petrol",
+        "l100":  7.6
+    },
+    {
+        "make":  "Volkswagen",
+        "model":  "Golf",
+        "engine":  "1.4 TSI",
+        "fuel":  "petrol",
+        "l100":  5.7
+    },
+    {
+        "make":  "Volkswagen",
+        "model":  "Golf GTI",
+        "engine":  "2.0 TSI",
+        "fuel":  "petrol",
+        "l100":  6.7
+    },
+    {
+        "make":  "Volkswagen",
+        "model":  "T-Cross",
+        "engine":  "1.0 TSI",
+        "fuel":  "petrol",
+        "l100":  5.5
+    },
+    {
+        "make":  "Volkswagen",
+        "model":  "Tiguan",
+        "engine":  "1.4 TSI",
+        "fuel":  "petrol",
+        "l100":  7
+    },
+    {
+        "make":  "Volkswagen",
+        "model":  "Tiguan",
+        "engine":  "2.0 TDI",
+        "fuel":  "diesel",
+        "l100":  6
+    },
+    {
+        "make":  "Volkswagen",
+        "model":  "Amarok",
+        "engine":  "2.0 BiTDI",
+        "fuel":  "diesel",
+        "l100":  8.6
+    },
+    {
+        "make":  "Volkswagen",
+        "model":  "Amarok",
+        "engine":  "3.0 V6 TDI",
+        "fuel":  "diesel",
+        "l100":  9.6
+    },
+    {
+        "make":  "Volkswagen",
+        "model":  "Caddy",
+        "engine":  "2.0 TDI",
+        "fuel":  "diesel",
+        "l100":  6
+    },
+    {
+        "make":  "Volkswagen",
+        "model":  "Transporter / Kombi",
+        "engine":  "2.0 BiTDI",
+        "fuel":  "diesel",
+        "l100":  8.5
+    },
+    {
+        "make":  "Suzuki",
+        "model":  "Swift",
+        "engine":  "1.2",
+        "fuel":  "petrol",
+        "l100":  4.7
+    },
+    {
+        "make":  "Suzuki",
+        "model":  "Dzire",
+        "engine":  "1.2",
+        "fuel":  "petrol",
+        "l100":  4.7
+    },
+    {
+        "make":  "Suzuki",
+        "model":  "Celerio",
+        "engine":  "1.0",
+        "fuel":  "petrol",
+        "l100":  4.4
+    },
+    {
+        "make":  "Suzuki",
+        "model":  "S-Presso",
+        "engine":  "1.0",
+        "fuel":  "petrol",
+        "l100":  4.9
+    },
+    {
+        "make":  "Suzuki",
+        "model":  "Baleno",
+        "engine":  "1.5",
+        "fuel":  "petrol",
+        "l100":  5.4
+    },
+    {
+        "make":  "Suzuki",
+        "model":  "Fronx",
+        "engine":  "1.5",
+        "fuel":  "petrol",
+        "l100":  5.5
+    },
+    {
+        "make":  "Suzuki",
+        "model":  "Ertiga",
+        "engine":  "1.5",
+        "fuel":  "petrol",
+        "l100":  6.2
+    },
+    {
+        "make":  "Suzuki",
+        "model":  "Brezza",
+        "engine":  "1.5",
+        "fuel":  "petrol",
+        "l100":  6.2
+    },
+    {
+        "make":  "Suzuki",
+        "model":  "Grand Vitara",
+        "engine":  "1.5",
+        "fuel":  "petrol",
+        "l100":  6.2
+    },
+    {
+        "make":  "Suzuki",
+        "model":  "Jimny",
+        "engine":  "1.5",
+        "fuel":  "petrol",
+        "l100":  6.4
+    },
+    {
+        "make":  "Suzuki",
+        "model":  "Super Carry",
+        "engine":  "1.2",
+        "fuel":  "petrol",
+        "l100":  6.4
+    },
+    {
+        "make":  "Suzuki",
+        "model":  "Eeco",
+        "engine":  "1.2",
+        "fuel":  "petrol",
+        "l100":  6.1
+    },
+    {
+        "make":  "Hyundai",
+        "model":  "Grand i10",
+        "engine":  "1.0",
+        "fuel":  "petrol",
+        "l100":  5.4
+    },
+    {
+        "make":  "Hyundai",
+        "model":  "Grand i10",
+        "engine":  "1.2",
+        "fuel":  "petrol",
+        "l100":  5.6
+    },
+    {
+        "make":  "Hyundai",
+        "model":  "i20",
+        "engine":  "1.2",
+        "fuel":  "petrol",
+        "l100":  5.6
+    },
+    {
+        "make":  "Hyundai",
+        "model":  "i20",
+        "engine":  "1.0 T-GDI",
+        "fuel":  "petrol",
+        "l100":  5.2
+    },
+    {
+        "make":  "Hyundai",
+        "model":  "Venue",
+        "engine":  "1.0 T-GDI",
+        "fuel":  "petrol",
+        "l100":  5.8
+    },
+    {
+        "make":  "Hyundai",
+        "model":  "Creta",
+        "engine":  "1.5",
+        "fuel":  "petrol",
+        "l100":  6.5
+    },
+    {
+        "make":  "Hyundai",
+        "model":  "Tucson",
+        "engine":  "2.0",
+        "fuel":  "petrol",
+        "l100":  7.9
+    },
+    {
+        "make":  "Hyundai",
+        "model":  "H100",
+        "engine":  "2.6 bakkie",
+        "fuel":  "diesel",
+        "l100":  8.6
+    },
+    {
+        "make":  "Hyundai",
+        "model":  "H-1 / Staria",
+        "engine":  "2.2 CRDi",
+        "fuel":  "diesel",
+        "l100":  8.9
+    },
+    {
+        "make":  "Kia",
+        "model":  "Picanto",
+        "engine":  "1.0",
+        "fuel":  "petrol",
+        "l100":  4.4
+    },
+    {
+        "make":  "Kia",
+        "model":  "Picanto",
+        "engine":  "1.2",
+        "fuel":  "petrol",
+        "l100":  5
+    },
+    {
+        "make":  "Kia",
+        "model":  "Rio",
+        "engine":  "1.4",
+        "fuel":  "petrol",
+        "l100":  5.8
+    },
+    {
+        "make":  "Kia",
+        "model":  "Pegas",
+        "engine":  "1.4",
+        "fuel":  "petrol",
+        "l100":  5.7
+    },
+    {
+        "make":  "Kia",
+        "model":  "Sonet",
+        "engine":  "1.5",
+        "fuel":  "petrol",
+        "l100":  6.2
+    },
+    {
+        "make":  "Kia",
+        "model":  "Seltos",
+        "engine":  "1.5",
+        "fuel":  "petrol",
+        "l100":  6.8
+    },
+    {
+        "make":  "Kia",
+        "model":  "Sportage",
+        "engine":  "2.0",
+        "fuel":  "petrol",
+        "l100":  7.9
+    },
+    {
+        "make":  "Ford",
+        "model":  "Ranger",
+        "engine":  "2.0 SiT",
+        "fuel":  "diesel",
+        "l100":  7.6
+    },
+    {
+        "make":  "Ford",
+        "model":  "Ranger",
+        "engine":  "2.0 BiT",
+        "fuel":  "diesel",
+        "l100":  7.8
+    },
+    {
+        "make":  "Ford",
+        "model":  "Ranger",
+        "engine":  "3.0 V6",
+        "fuel":  "diesel",
+        "l100":  8.4
+    },
+    {
+        "make":  "Ford",
+        "model":  "Ranger (older)",
+        "engine":  "2.2 TDCi",
+        "fuel":  "diesel",
+        "l100":  7.6
+    },
+    {
+        "make":  "Ford",
+        "model":  "Ranger (older)",
+        "engine":  "3.2 TDCi",
+        "fuel":  "diesel",
+        "l100":  9
+    },
+    {
+        "make":  "Ford",
+        "model":  "Everest",
+        "engine":  "2.0 BiT",
+        "fuel":  "diesel",
+        "l100":  7.6
+    },
+    {
+        "make":  "Ford",
+        "model":  "EcoSport",
+        "engine":  "1.0 EcoBoost",
+        "fuel":  "petrol",
+        "l100":  5.8
+    },
+    {
+        "make":  "Ford",
+        "model":  "Figo",
+        "engine":  "1.5",
+        "fuel":  "petrol",
+        "l100":  5.7
+    },
+    {
+        "make":  "Ford",
+        "model":  "Fiesta",
+        "engine":  "1.0 EcoBoost",
+        "fuel":  "petrol",
+        "l100":  5.4
+    },
+    {
+        "make":  "Ford",
+        "model":  "Territory",
+        "engine":  "1.8T",
+        "fuel":  "petrol",
+        "l100":  7.5
+    },
+    {
+        "make":  "Nissan",
+        "model":  "NP200",
+        "engine":  "1.6",
+        "fuel":  "petrol",
+        "l100":  7
+    },
+    {
+        "make":  "Nissan",
+        "model":  "NP300 Hardbody",
+        "engine":  "2.5 dCi",
+        "fuel":  "diesel",
+        "l100":  9
+    },
+    {
+        "make":  "Nissan",
+        "model":  "NP300 Hardbody",
+        "engine":  "2.5 petrol",
+        "fuel":  "petrol",
+        "l100":  11
+    },
+    {
+        "make":  "Nissan",
+        "model":  "Navara",
+        "engine":  "2.5 dCi",
+        "fuel":  "diesel",
+        "l100":  7.7
+    },
+    {
+        "make":  "Nissan",
+        "model":  "Magnite",
+        "engine":  "1.0 turbo",
+        "fuel":  "petrol",
+        "l100":  5.8
+    },
+    {
+        "make":  "Nissan",
+        "model":  "Almera",
+        "engine":  "1.5",
+        "fuel":  "petrol",
+        "l100":  6.3
+    },
+    {
+        "make":  "Nissan",
+        "model":  "Qashqai",
+        "engine":  "1.3 turbo",
+        "fuel":  "petrol",
+        "l100":  6.5
+    },
+    {
+        "make":  "Nissan",
+        "model":  "X-Trail",
+        "engine":  "2.5",
+        "fuel":  "petrol",
+        "l100":  8.3
+    },
+    {
+        "make":  "Nissan",
+        "model":  "1400 Champ",
+        "engine":  "1.4",
+        "fuel":  "petrol",
+        "l100":  9
+    },
+    {
+        "make":  "Isuzu",
+        "model":  "D-Max",
+        "engine":  "1.9 Ddi",
+        "fuel":  "diesel",
+        "l100":  6.9
+    },
+    {
+        "make":  "Isuzu",
+        "model":  "D-Max",
+        "engine":  "3.0 Ddi",
+        "fuel":  "diesel",
+        "l100":  8
+    },
+    {
+        "make":  "Isuzu",
+        "model":  "D-Max",
+        "engine":  "2.5 / 250",
+        "fuel":  "diesel",
+        "l100":  8.2
+    },
+    {
+        "make":  "Isuzu",
+        "model":  "MU-X",
+        "engine":  "3.0 Ddi",
+        "fuel":  "diesel",
+        "l100":  8
+    },
+    {
+        "make":  "Renault",
+        "model":  "Kwid",
+        "engine":  "1.0",
+        "fuel":  "petrol",
+        "l100":  4.7
+    },
+    {
+        "make":  "Renault",
+        "model":  "Kiger",
+        "engine":  "1.0",
+        "fuel":  "petrol",
+        "l100":  5
+    },
+    {
+        "make":  "Renault",
+        "model":  "Kiger",
+        "engine":  "1.0 turbo",
+        "fuel":  "petrol",
+        "l100":  5.7
+    },
+    {
+        "make":  "Renault",
+        "model":  "Triber",
+        "engine":  "1.0",
+        "fuel":  "petrol",
+        "l100":  5.5
+    },
+    {
+        "make":  "Renault",
+        "model":  "Clio",
+        "engine":  "1.0 TCe",
+        "fuel":  "petrol",
+        "l100":  5.1
+    },
+    {
+        "make":  "Renault",
+        "model":  "Duster",
+        "engine":  "1.5 dCi",
+        "fuel":  "diesel",
+        "l100":  5
+    },
+    {
+        "make":  "Renault",
+        "model":  "Sandero",
+        "engine":  "0.9 turbo",
+        "fuel":  "petrol",
+        "l100":  5.2
+    },
+    {
+        "make":  "Mahindra",
+        "model":  "Pik Up",
+        "engine":  "2.2 mHawk",
+        "fuel":  "diesel",
+        "l100":  9
+    },
+    {
+        "make":  "Mahindra",
+        "model":  "Scorpio-N",
+        "engine":  "2.2 diesel",
+        "fuel":  "diesel",
+        "l100":  8.5
+    },
+    {
+        "make":  "Mahindra",
+        "model":  "XUV300 / XUV 3XO",
+        "engine":  "1.2 turbo",
+        "fuel":  "petrol",
+        "l100":  6.3
+    },
+    {
+        "make":  "Mahindra",
+        "model":  "XUV700",
+        "engine":  "2.2 diesel",
+        "fuel":  "diesel",
+        "l100":  8.2
+    },
+    {
+        "make":  "Haval",
+        "model":  "Jolion",
+        "engine":  "1.5T",
+        "fuel":  "petrol",
+        "l100":  7.3
+    },
+    {
+        "make":  "Haval",
+        "model":  "Jolion",
+        "engine":  "1.5 HEV",
+        "fuel":  "petrol",
+        "l100":  5
+    },
+    {
+        "make":  "Haval",
+        "model":  "H6",
+        "engine":  "2.0T",
+        "fuel":  "petrol",
+        "l100":  7.9
+    },
+    {
+        "make":  "GWM",
+        "model":  "P-Series",
+        "engine":  "2.0TD",
+        "fuel":  "diesel",
+        "l100":  8.5
+    },
+    {
+        "make":  "GWM",
+        "model":  "Steed 5",
+        "engine":  "2.0 VGT",
+        "fuel":  "diesel",
+        "l100":  8.5
+    },
+    {
+        "make":  "GWM",
+        "model":  "Steed 5",
+        "engine":  "2.2 petrol",
+        "fuel":  "petrol",
+        "l100":  10.5
+    },
+    {
+        "make":  "Chery",
+        "model":  "Tiggo 4 Pro",
+        "engine":  "1.5",
+        "fuel":  "petrol",
+        "l100":  7.5
+    },
+    {
+        "make":  "Chery",
+        "model":  "Tiggo 4 Pro",
+        "engine":  "1.5T",
+        "fuel":  "petrol",
+        "l100":  7.4
+    },
+    {
+        "make":  "Chery",
+        "model":  "Tiggo 7 Pro",
+        "engine":  "1.6T",
+        "fuel":  "petrol",
+        "l100":  7.8
+    },
+    {
+        "make":  "Chery",
+        "model":  "Tiggo 8 Pro",
+        "engine":  "1.6T",
+        "fuel":  "petrol",
+        "l100":  8.5
+    },
+    {
+        "make":  "Omoda",
+        "model":  "C5",
+        "engine":  "1.5T",
+        "fuel":  "petrol",
+        "l100":  7.4
+    },
+    {
+        "make":  "BAIC",
+        "model":  "Beijing X55",
+        "engine":  "1.5T",
+        "fuel":  "petrol",
+        "l100":  8
+    },
+    {
+        "make":  "Opel",
+        "model":  "Corsa",
+        "engine":  "1.2 turbo",
+        "fuel":  "petrol",
+        "l100":  5.4
+    },
+    {
+        "make":  "Opel",
+        "model":  "Corsa Utility",
+        "engine":  "1.4",
+        "fuel":  "petrol",
+        "l100":  7.3
+    },
+    {
+        "make":  "Chevrolet",
+        "model":  "Spark",
+        "engine":  "1.2",
+        "fuel":  "petrol",
+        "l100":  5.8
+    },
+    {
+        "make":  "Chevrolet",
+        "model":  "Utility",
+        "engine":  "1.4",
+        "fuel":  "petrol",
+        "l100":  7.4
+    },
+    {
+        "make":  "Chevrolet",
+        "model":  "Aveo",
+        "engine":  "1.6",
+        "fuel":  "petrol",
+        "l100":  7
+    },
+    {
+        "make":  "Datsun",
+        "model":  "Go / Go+",
+        "engine":  "1.2",
+        "fuel":  "petrol",
+        "l100":  5.2
+    },
+    {
+        "make":  "Honda",
+        "model":  "Amaze",
+        "engine":  "1.2",
+        "fuel":  "petrol",
+        "l100":  5.5
+    },
+    {
+        "make":  "Honda",
+        "model":  "Fit / Jazz",
+        "engine":  "1.5",
+        "fuel":  "petrol",
+        "l100":  5.8
+    },
+    {
+        "make":  "Honda",
+        "model":  "BR-V",
+        "engine":  "1.5",
+        "fuel":  "petrol",
+        "l100":  6.8
+    },
+    {
+        "make":  "Mazda",
+        "model":  "Mazda2",
+        "engine":  "1.5",
+        "fuel":  "petrol",
+        "l100":  5.4
+    },
+    {
+        "make":  "Mazda",
+        "model":  "CX-5",
+        "engine":  "2.0",
+        "fuel":  "petrol",
+        "l100":  7
+    },
+    {
+        "make":  "Mazda",
+        "model":  "BT-50",
+        "engine":  "1.9 / 3.0 diesel",
+        "fuel":  "diesel",
+        "l100":  7.9
+    },
+    {
+        "make":  "Peugeot",
+        "model":  "208",
+        "engine":  "1.2",
+        "fuel":  "petrol",
+        "l100":  5
+    },
+    {
+        "make":  "Peugeot",
+        "model":  "Landtrek",
+        "engine":  "1.9 diesel",
+        "fuel":  "diesel",
+        "l100":  8.4
+    },
+    {
+        "make":  "CitroÃƒÂ«n",
+        "model":  "C3",
+        "engine":  "1.2",
+        "fuel":  "petrol",
+        "l100":  5.3
+    },
+    {
+        "make":  "Proton",
+        "model":  "Saga",
+        "engine":  "1.3",
+        "fuel":  "petrol",
+        "l100":  5.6
+    },
+    {
+        "make":  "BMW",
+        "model":  "1 Series",
+        "engine":  "118i",
+        "fuel":  "petrol",
+        "l100":  6
+    },
+    {
+        "make":  "BMW",
+        "model":  "3 Series",
+        "engine":  "320i",
+        "fuel":  "petrol",
+        "l100":  6.4
+    },
+    {
+        "make":  "BMW",
+        "model":  "3 Series",
+        "engine":  "320d",
+        "fuel":  "diesel",
+        "l100":  4.9
+    },
+    {
+        "make":  "BMW",
+        "model":  "X3",
+        "engine":  "xDrive20d",
+        "fuel":  "diesel",
+        "l100":  6
+    },
+    {
+        "make":  "Mercedes-Benz",
+        "model":  "A-Class",
+        "engine":  "A200",
+        "fuel":  "petrol",
+        "l100":  5.9
+    },
+    {
+        "make":  "Mercedes-Benz",
+        "model":  "C-Class",
+        "engine":  "C200",
+        "fuel":  "petrol",
+        "l100":  6.6
+    },
+    {
+        "make":  "Mercedes-Benz",
+        "model":  "Sprinter",
+        "engine":  "2.1 CDI",
+        "fuel":  "diesel",
+        "l100":  9.5
+    },
+    {
+        "make":  "Audi",
+        "model":  "A3",
+        "engine":  "35 TFSI",
+        "fuel":  "petrol",
+        "l100":  5.4
+    },
+    {
+        "make":  "Audi",
+        "model":  "A4",
+        "engine":  "35 TFSI",
+        "fuel":  "petrol",
+        "l100":  6
+    },
+    {
+        "make":  "Land Rover",
+        "model":  "Defender",
+        "engine":  "D300",
+        "fuel":  "diesel",
+        "l100":  9.5
+    },
+    {
+        "make":  "Jeep",
+        "model":  "Wrangler",
+        "engine":  "2.0T",
+        "fuel":  "petrol",
+        "l100":  10.5
+    },
+    {
+        "make":  "Mitsubishi",
+        "model":  "Triton",
+        "engine":  "2.4 diesel",
+        "fuel":  "diesel",
+        "l100":  7.8
+    },
+    {
+        "make":  "Mitsubishi",
+        "model":  "Pajero Sport",
+        "engine":  "2.4 diesel",
+        "fuel":  "diesel",
+        "l100":  8
+    },
+    {
+        "make":  "Mitsubishi",
+        "model":  "ASX",
+        "engine":  "2.0",
+        "fuel":  "petrol",
+        "l100":  7.7
+    },
+    {
+        "make":  "Subaru",
+        "model":  "Forester",
+        "engine":  "2.5",
+        "fuel":  "petrol",
+        "l100":  7.4
+    },
+    {
+        "make":  "Generic",
+        "model":  "Small hatchback",
+        "engine":  "1.0Ã¢â‚¬â€œ1.4",
+        "fuel":  "petrol",
+        "l100":  6.5
+    },
+    {
+        "make":  "Generic",
+        "model":  "Sedan",
+        "engine":  "1.5Ã¢â‚¬â€œ2.0",
+        "fuel":  "petrol",
+        "l100":  8
+    },
+    {
+        "make":  "Generic",
+        "model":  "SUV",
+        "engine":  "petrol",
+        "fuel":  "petrol",
+        "l100":  10.5
+    },
+    {
+        "make":  "Generic",
+        "model":  "Bakkie",
+        "engine":  "diesel",
+        "fuel":  "diesel",
+        "l100":  9.5
+    },
+    {
+        "make":  "Generic",
+        "model":  "Minibus taxi",
+        "engine":  "diesel",
+        "fuel":  "diesel",
+        "l100":  11
+    },
+    {
+        "make":  "Generic",
+        "model":  "Motorcycle",
+        "engine":  "125Ã¢â‚¬â€œ250cc",
+        "fuel":  "petrol",
+        "l100":  3
+    },
+    {
+        "make":  "Isuzu",
+        "model":  "N-Series NMR 250",
+        "engine":  "3.5 t light truck",
+        "fuel":  "diesel",
+        "l100":  13,
+        "type":  "truck"
+    },
+    {
+        "make":  "Isuzu",
+        "model":  "N-Series NPR 400",
+        "engine":  "5 t light truck",
+        "fuel":  "diesel",
+        "l100":  15,
+        "type":  "truck"
+    },
+    {
+        "make":  "Isuzu",
+        "model":  "N-Series NQR 500",
+        "engine":  "8 t medium truck",
+        "fuel":  "diesel",
+        "l100":  18,
+        "type":  "truck"
+    },
+    {
+        "make":  "Isuzu",
+        "model":  "F-Series FRR 600",
+        "engine":  "9 t medium truck",
+        "fuel":  "diesel",
+        "l100":  22,
+        "type":  "truck"
+    },
+    {
+        "make":  "Isuzu",
+        "model":  "F-Series FTR 850",
+        "engine":  "13 t medium truck",
+        "fuel":  "diesel",
+        "l100":  25,
+        "type":  "truck"
+    },
+    {
+        "make":  "Isuzu",
+        "model":  "F-Series FVZ 1400",
+        "engine":  "14 t rigid / tipper",
+        "fuel":  "diesel",
+        "l100":  30,
+        "type":  "truck"
+    },
+    {
+        "make":  "Isuzu",
+        "model":  "Giga EXZ",
+        "engine":  "truck-tractor (interlink)",
+        "fuel":  "diesel",
+        "l100":  38,
+        "type":  "truck"
+    },
+    {
+        "make":  "Hino",
+        "model":  "300 Series 815",
+        "engine":  "4–8 t light truck",
+        "fuel":  "diesel",
+        "l100":  15,
+        "type":  "truck"
+    },
+    {
+        "make":  "Hino",
+        "model":  "500 Series 1627",
+        "engine":  "rigid / tipper",
+        "fuel":  "diesel",
+        "l100":  26,
+        "type":  "truck"
+    },
+    {
+        "make":  "Hino",
+        "model":  "700 Series 2848",
+        "engine":  "truck-tractor (interlink)",
+        "fuel":  "diesel",
+        "l100":  40,
+        "type":  "truck"
+    },
+    {
+        "make":  "UD Trucks",
+        "model":  "Croner",
+        "engine":  "medium truck",
+        "fuel":  "diesel",
+        "l100":  24,
+        "type":  "truck"
+    },
+    {
+        "make":  "UD Trucks",
+        "model":  "Quester",
+        "engine":  "rigid / tipper",
+        "fuel":  "diesel",
+        "l100":  32,
+        "type":  "truck"
+    },
+    {
+        "make":  "UD Trucks",
+        "model":  "Quon GW 26-460",
+        "engine":  "truck-tractor (interlink)",
+        "fuel":  "diesel",
+        "l100":  39,
+        "type":  "truck"
+    },
+    {
+        "make":  "Mercedes-Benz",
+        "model":  "Atego 1518",
+        "engine":  "medium truck",
+        "fuel":  "diesel",
+        "l100":  22,
+        "type":  "truck"
+    },
+    {
+        "make":  "Mercedes-Benz",
+        "model":  "Axor 2533",
+        "engine":  "rigid truck",
+        "fuel":  "diesel",
+        "l100":  32,
+        "type":  "truck"
+    },
+    {
+        "make":  "Mercedes-Benz",
+        "model":  "Actros 2645",
+        "engine":  "truck-tractor (interlink)",
+        "fuel":  "diesel",
+        "l100":  37,
+        "type":  "truck"
+    },
+    {
+        "make":  "Mercedes-Benz",
+        "model":  "Arocs 3345",
+        "engine":  "tipper",
+        "fuel":  "diesel",
+        "l100":  42,
+        "type":  "truck"
+    },
+    {
+        "make":  "Volvo",
+        "model":  "FM 440",
+        "engine":  "truck-tractor",
+        "fuel":  "diesel",
+        "l100":  37,
+        "type":  "truck"
+    },
+    {
+        "make":  "Volvo",
+        "model":  "FH 460",
+        "engine":  "truck-tractor (interlink)",
+        "fuel":  "diesel",
+        "l100":  38,
+        "type":  "truck"
+    },
+    {
+        "make":  "Volvo",
+        "model":  "FMX 440",
+        "engine":  "tipper",
+        "fuel":  "diesel",
+        "l100":  45,
+        "type":  "truck"
+    },
+    {
+        "make":  "Volvo",
+        "model":  "FL",
+        "engine":  "medium truck",
+        "fuel":  "diesel",
+        "l100":  22,
+        "type":  "truck"
+    },
+    {
+        "make":  "Scania",
+        "model":  "P 360",
+        "engine":  "rigid truck",
+        "fuel":  "diesel",
+        "l100":  30,
+        "type":  "truck"
+    },
+    {
+        "make":  "Scania",
+        "model":  "G 460",
+        "engine":  "truck-tractor",
+        "fuel":  "diesel",
+        "l100":  37,
+        "type":  "truck"
+    },
+    {
+        "make":  "Scania",
+        "model":  "R 500",
+        "engine":  "truck-tractor (interlink)",
+        "fuel":  "diesel",
+        "l100":  38,
+        "type":  "truck"
+    },
+    {
+        "make":  "MAN",
+        "model":  "TGM 15.250",
+        "engine":  "medium truck",
+        "fuel":  "diesel",
+        "l100":  24,
+        "type":  "truck"
+    },
+    {
+        "make":  "MAN",
+        "model":  "TGS 26.440",
+        "engine":  "truck-tractor / tipper",
+        "fuel":  "diesel",
+        "l100":  38,
+        "type":  "truck"
+    },
+    {
+        "make":  "MAN",
+        "model":  "TGX 26.540",
+        "engine":  "truck-tractor (interlink)",
+        "fuel":  "diesel",
+        "l100":  38,
+        "type":  "truck"
+    },
+    {
+        "make":  "DAF",
+        "model":  "CF 85",
+        "engine":  "truck-tractor",
+        "fuel":  "diesel",
+        "l100":  37,
+        "type":  "truck"
+    },
+    {
+        "make":  "DAF",
+        "model":  "XF 480",
+        "engine":  "truck-tractor (interlink)",
+        "fuel":  "diesel",
+        "l100":  36,
+        "type":  "truck"
+    },
+    {
+        "make":  "Iveco",
+        "model":  "Daily 50C",
+        "engine":  "3.5–5 t light truck",
+        "fuel":  "diesel",
+        "l100":  13,
+        "type":  "truck"
+    },
+    {
+        "make":  "Iveco",
+        "model":  "Eurocargo",
+        "engine":  "medium truck",
+        "fuel":  "diesel",
+        "l100":  22,
+        "type":  "truck"
+    },
+    {
+        "make":  "Iveco",
+        "model":  "Stralis / S-Way",
+        "engine":  "truck-tractor",
+        "fuel":  "diesel",
+        "l100":  38,
+        "type":  "truck"
+    },
+    {
+        "make":  "Fuso",
+        "model":  "Canter FE7-136",
+        "engine":  "light truck",
+        "fuel":  "diesel",
+        "l100":  13,
+        "type":  "truck"
+    },
+    {
+        "make":  "Fuso",
+        "model":  "FJ 26-280",
+        "engine":  "rigid / tipper",
+        "fuel":  "diesel",
+        "l100":  33,
+        "type":  "truck"
+    },
+    {
+        "make":  "Fuso",
+        "model":  "FZ 49-430",
+        "engine":  "truck-tractor",
+        "fuel":  "diesel",
+        "l100":  40,
+        "type":  "truck"
+    },
+    {
+        "make":  "FAW",
+        "model":  "8.140",
+        "engine":  "light truck",
+        "fuel":  "diesel",
+        "l100":  15,
+        "type":  "truck"
+    },
+    {
+        "make":  "FAW",
+        "model":  "15.180",
+        "engine":  "medium truck",
+        "fuel":  "diesel",
+        "l100":  24,
+        "type":  "truck"
+    },
+    {
+        "make":  "FAW",
+        "model":  "28.380",
+        "engine":  "tipper",
+        "fuel":  "diesel",
+        "l100":  42,
+        "type":  "truck"
+    },
+    {
+        "make":  "FAW",
+        "model":  "JH6 28.500",
+        "engine":  "truck-tractor (interlink)",
+        "fuel":  "diesel",
+        "l100":  40,
+        "type":  "truck"
+    },
+    {
+        "make":  "Tata",
+        "model":  "Ultra 1014",
+        "engine":  "medium truck",
+        "fuel":  "diesel",
+        "l100":  17,
+        "type":  "truck"
+    },
+    {
+        "make":  "Tata",
+        "model":  "Prima 2528",
+        "engine":  "tipper",
+        "fuel":  "diesel",
+        "l100":  32,
+        "type":  "truck"
+    },
+    {
+        "make":  "Tata",
+        "model":  "Prima 3138",
+        "engine":  "truck-tractor",
+        "fuel":  "diesel",
+        "l100":  39,
+        "type":  "truck"
+    },
+    {
+        "make":  "Toyota",
+        "model":  "Dyna 4-093",
+        "engine":  "4 t light truck",
+        "fuel":  "diesel",
+        "l100":  13,
+        "type":  "truck"
+    },
+    {
+        "make":  "Toyota",
+        "model":  "Dyna 7-145",
+        "engine":  "7 t medium truck",
+        "fuel":  "diesel",
+        "l100":  16,
+        "type":  "truck"
+    },
+    {
+        "make":  "Hyundai",
+        "model":  "Mighty / HD72",
+        "engine":  "light truck",
+        "fuel":  "diesel",
+        "l100":  14,
+        "type":  "truck"
+    },
+    {
+        "make":  "Foton",
+        "model":  "Aumark",
+        "engine":  "3.5 t light truck",
+        "fuel":  "diesel",
+        "l100":  13,
+        "type":  "truck"
+    },
+    {
+        "make":  "JAC",
+        "model":  "N-Series",
+        "engine":  "3.5 t light truck",
+        "fuel":  "diesel",
+        "l100":  13,
+        "type":  "truck"
+    },
+    {
+        "make":  "Sinotruk",
+        "model":  "Howo 371",
+        "engine":  "truck-tractor (interlink)",
+        "fuel":  "diesel",
+        "l100":  42,
+        "type":  "truck"
+    },
+    {
+        "make":  "Sinotruk",
+        "model":  "Howo tipper",
+        "engine":  "tipper",
+        "fuel":  "diesel",
+        "l100":  44,
+        "type":  "truck"
+    },
+    {
+        "make":  "Shacman",
+        "model":  "X3000",
+        "engine":  "truck-tractor",
+        "fuel":  "diesel",
+        "l100":  41,
+        "type":  "truck"
+    },
+    {
+        "make":  "Powerstar",
+        "model":  "VX 2642",
+        "engine":  "truck-tractor",
+        "fuel":  "diesel",
+        "l100":  40,
+        "type":  "truck"
+    },
+    {
+        "make":  "Eicher",
+        "model":  "Pro 3015",
+        "engine":  "medium truck",
+        "fuel":  "diesel",
+        "l100":  22,
+        "type":  "truck"
+    },
+    {
+        "make":  "Renault Trucks",
+        "model":  "T 480",
+        "engine":  "truck-tractor",
+        "fuel":  "diesel",
+        "l100":  37,
+        "type":  "truck"
+    },
+    {
+        "make":  "Freightliner",
+        "model":  "Argosy",
+        "engine":  "truck-tractor (interlink)",
+        "fuel":  "diesel",
+        "l100":  40,
+        "type":  "truck"
+    },
+    {
+        "make":  "Freightliner",
+        "model":  "Cascadia",
+        "engine":  "truck-tractor",
+        "fuel":  "diesel",
+        "l100":  36,
+        "type":  "truck"
+    },
+    {
+        "make":  "International",
+        "model":  "ProStar",
+        "engine":  "truck-tractor",
+        "fuel":  "diesel",
+        "l100":  37,
+        "type":  "truck"
+    },
+    {
+        "make":  "Kenworth",
+        "model":  "T680",
+        "engine":  "truck-tractor",
+        "fuel":  "diesel",
+        "l100":  36,
+        "type":  "truck"
+    },
+    {
+        "make":  "Peterbilt",
+        "model":  "579",
+        "engine":  "truck-tractor",
+        "fuel":  "diesel",
+        "l100":  36,
+        "type":  "truck"
+    },
+    {
+        "make":  "Mack",
+        "model":  "Anthem",
+        "engine":  "truck-tractor",
+        "fuel":  "diesel",
+        "l100":  37,
+        "type":  "truck"
+    },
+    {
+        "make":  "Ford",
+        "model":  "F-250 Super Duty",
+        "engine":  "6.7 diesel (heavy-duty pickup)",
+        "fuel":  "diesel",
+        "l100":  15.5,
+        "type":  "truck"
+    },
+    {
+        "make":  "Ford",
+        "model":  "F-350 Super Duty",
+        "engine":  "6.7 diesel (heavy-duty pickup)",
+        "fuel":  "diesel",
+        "l100":  16,
+        "type":  "truck"
+    },
+    {
+        "make":  "Ford",
+        "model":  "F-550 Super Duty",
+        "engine":  "6.7 diesel (chassis cab)",
+        "fuel":  "diesel",
+        "l100":  18,
+        "type":  "truck"
+    },
+    {
+        "make":  "Ram",
+        "model":  "2500",
+        "engine":  "6.7 Cummins (heavy-duty pickup)",
+        "fuel":  "diesel",
+        "l100":  15.5,
+        "type":  "truck"
+    },
+    {
+        "make":  "Ram",
+        "model":  "3500",
+        "engine":  "6.7 Cummins (heavy-duty pickup)",
+        "fuel":  "diesel",
+        "l100":  16.5,
+        "type":  "truck"
+    },
+    {
+        "make":  "Chevrolet",
+        "model":  "Silverado 2500HD",
+        "engine":  "6.6 Duramax (heavy-duty pickup)",
+        "fuel":  "diesel",
+        "l100":  15.5,
+        "type":  "truck"
+    },
+    {
+        "make":  "GMC",
+        "model":  "Sierra 2500HD",
+        "engine":  "6.6 Duramax (heavy-duty pickup)",
+        "fuel":  "diesel",
+        "l100":  15.5,
+        "type":  "truck"
+    },
+    {
+        "make":  "Toyota",
+        "model":  "Coaster",
+        "engine":  "bus (22-seater)",
+        "fuel":  "diesel",
+        "l100":  18,
+        "type":  "truck"
+    },
+    {
+        "make":  "Mercedes-Benz",
+        "model":  "O500 / Marcopolo",
+        "engine":  "bus / coach",
+        "fuel":  "diesel",
+        "l100":  35,
+        "type":  "truck"
+    },
+    {
+        "make":  "MAN",
+        "model":  "Lion\u0027s Coach",
+        "engine":  "coach",
+        "fuel":  "diesel",
+        "l100":  33,
+        "type":  "truck"
+    },
+    {
+        "make":  "Volvo",
+        "model":  "B8R / B11R",
+        "engine":  "bus / coach",
+        "fuel":  "diesel",
+        "l100":  34,
+        "type":  "truck"
+    }
+]

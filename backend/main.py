@@ -37,6 +37,9 @@ from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 from typing import Literal
 
+import asyncio
+from contextlib import asynccontextmanager
+
 import anthropic
 import httpx
 from fastapi import BackgroundTasks, FastAPI, Header, HTTPException, Query, Request
@@ -44,6 +47,8 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import PlainTextResponse
 from dotenv import load_dotenv
 from pydantic import BaseModel, Field
+
+import vehicles
 
 load_dotenv()  # reads backend/.env locally; on Render, env vars come from the dashboard
 
@@ -283,10 +288,19 @@ LOCAL_ORIGINS = [
 ]
 extra_origins = [o.strip() for o in os.getenv("ALLOWED_ORIGINS", "").split(",") if o.strip()]
 
+@asynccontextmanager
+async def lifespan(_app: FastAPI):
+    # Load the vehicle database in the background (so startup stays fast) and refresh it every 24h.
+    task = asyncio.create_task(vehicles.refresh_forever())
+    yield
+    task.cancel()
+
+
 app = FastAPI(
     title=APP_NAME,
     version=APP_VERSION,
     description="Backend for iammasterheavenly (Pty) Ltd — web development, AI assistants and digital publishing.",
+    lifespan=lifespan,
 )
 
 app.add_middleware(
@@ -306,7 +320,7 @@ def root():
         "version": APP_VERSION,
         "status": "ok",
         "ai_mode": "live" if llm_client else "demo",
-        "endpoints": ["/health", "/api/fuel-prices", "/api/scripture/today", "/api/chat"],
+        "endpoints": ["/health", "/api/fuel-prices", "/api/vehicles/search?q=", "/api/scripture/today", "/api/chat"],
     }
 
 
@@ -320,6 +334,22 @@ def health():
 async def fuel_prices():
     """Current official South African fuel prices in ZAR per litre (inland and coastal)."""
     return await get_fuel_prices()
+
+
+@app.get("/api/vehicles/search")
+async def vehicle_search(
+    background: BackgroundTasks,
+    q: str = Query(default="", max_length=80),
+    limit: int = Query(default=12, ge=1, le=30),
+):
+    """Search cars, bakkies, SUVs, vans, trucks and buses with their fuel consumption (L/100km)."""
+    background.add_task(vehicles.refresh)  # no-op unless the data is over 24h old (e.g. after a long sleep)
+    return {"results": vehicles.search(q, limit), **vehicles.stats()}
+
+
+@app.get("/api/vehicles/stats")
+def vehicle_stats():
+    return vehicles.stats()
 
 
 @app.get("/api/scripture/today")

@@ -185,8 +185,12 @@ Add the final Pages URL (and any custom domain) to `ALLOWED_ORIGINS` on Render.
   50ppm/500ppm diesel) from the Automobile Association of South Africa's public price feed and caches them for
   6 hours. If that source is unreachable it uses `FALLBACK_PRICES` in `backend/main.py` (and the frontend uses
   `FALLBACK` in `FuelCalculator.jsx` while the API wakes up) — update those occasionally so the fallback stays close.
-- **Vehicle search:** edit `frontend/src/data/vehicles.js` to add cars (make, model, engine, fuel, L/100km).
-  Figures are approximate manufacturer claims; users can adjust the consumption after picking a car.
+- **Vehicle search (automatic):** `GET /api/vehicles/search?q=` searches two merged sources:
+  the US EPA fuel economy database (every car, SUV, van and light pickup sold in the US since 1984, ~145 makes,
+  downloaded from fueleconomy.gov at startup and refreshed every 24 hours) and `data/sa_vehicles.json`
+  (SA-market models plus light/medium/heavy trucks and buses). To add vehicles by hand, edit
+  `backend/data/sa_vehicles.json` and copy it to `frontend/src/data/sa_vehicles.json` (used instantly while the
+  API wakes up). Electric vehicles are excluded. Users can adjust the consumption after picking a vehicle.
 - **Scripture list:** edit `backend/data/scriptures.json`, then copy it to `frontend/src/data/scriptures.json` so both pick the same verse each day.
 - **E-books:** edit `PUBLICATIONS` in `frontend/src/pages/Home.jsx`.
 - **Scripture scribble-board background:** edit `frontend/src/data/backdropVerses.js` (~160 KJV verses in six
