@@ -13,7 +13,7 @@ export default function App() {
 
   return (
     // `isolate` keeps the -z-10 backdrop inside this stacking context, behind the content.
-    // The backdrop is absolutely positioned over the full page height, so it scrolls with it.
+    // The backdrop is fixed behind the page and drifts slowly as you scroll.
     <div className="relative isolate flex min-h-screen flex-col">
       <ScriptureBackdrop />
       <WordOfTheDay />

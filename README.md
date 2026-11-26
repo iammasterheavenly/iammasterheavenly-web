@@ -181,14 +181,20 @@ Add the final Pages URL (and any custom domain) to `ALLOWED_ORIGINS` on Render.
 
 ## 7. Monthly / content updates
 
-- **Fuel prices:** edit `FUEL_PRICES` + `FUEL_PRICES_EFFECTIVE` in `backend/main.py` and `FALLBACK_PRICES` in `frontend/src/components/FuelCalculator.jsx`. The shipped prices are indicative placeholders.
+- **Fuel prices (automatic):** the backend reads the official monthly prices (inland and coastal, 93/95 petrol,
+  50ppm/500ppm diesel) from the Automobile Association of South Africa's public price feed and caches them for
+  6 hours. If that source is unreachable it uses `FALLBACK_PRICES` in `backend/main.py` (and the frontend uses
+  `FALLBACK` in `FuelCalculator.jsx` while the API wakes up) — update those occasionally so the fallback stays close.
+- **Vehicle search:** edit `frontend/src/data/vehicles.js` to add cars (make, model, engine, fuel, L/100km).
+  Figures are approximate manufacturer claims; users can adjust the consumption after picking a car.
 - **Scripture list:** edit `backend/data/scriptures.json`, then copy it to `frontend/src/data/scriptures.json` so both pick the same verse each day.
 - **E-books:** edit `PUBLICATIONS` in `frontend/src/pages/Home.jsx`.
 - **Scripture scribble-board background:** edit `frontend/src/data/backdropVerses.js` (~160 KJV verses in six
   themes: protection, equipping, encouragement, God's promises, God's glory, the Holy Spirit). Fonts, sizes,
   tilts and shades are assigned automatically in `ScriptureBackdrop.jsx`; the list repeats down the page
   (`PASSES`) so scrolling keeps revealing scripture, and a faint handwritten layer fills every gap.
-  Open `/?wallpaper` to see the board on its own. Its strength behind the site is the `opacity-[0.24]` value.
+  Open `/?wallpaper` to see the board on its own. Behind the site it is fixed and drifts at `DRIFT` (0.2× scroll
+  speed); its strength is the `opacity-[0.10]` value in `ScriptureBackdrop.jsx`.
 - **Word of the Day bar:** the top bar shows the same daily verse as the Scripture of the Day card
   (`frontend/src/components/WordOfTheDay.jsx`, verse list in `scriptures.json`).
 

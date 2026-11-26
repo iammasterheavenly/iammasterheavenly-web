@@ -1,4 +1,4 @@
-import { useMemo } from "react";
+import { useEffect, useMemo, useRef } from "react";
 import { THEMES, ACCENT_WORDS, DECORATIONS } from "../data/backdropVerses.js";
 
 /*
@@ -35,7 +35,7 @@ const BY_LENGTH = {
 
 const SHADES = ["text-zinc-50", "text-zinc-200", "text-zinc-300", "text-zinc-400", "text-zinc-500"];
 const ALIGN = ["text-left", "text-center", "text-right"];
-const PASSES = 3; // how many times the verse list repeats down the page
+const PASSES = 2; // how many times the verse list repeats (enough for the slow drift on any page)
 
 // Small seeded random generator so the board looks random but is identical on every visit.
 function seeded(seed) {
@@ -104,7 +104,7 @@ function buildTexture() {
   const all = Object.values(THEMES)
     .flatMap((t) => t.verses.map(([text, ref]) => `${text.replace(/\n/g, " ")} (${ref})`))
     .join("  ✦  ");
-  return Array.from({ length: 10 }, () => all).join("  ✦  ");
+  return Array.from({ length: 6 }, () => all).join("  ✦  ");
 }
 
 function Deco({ kind }) {
@@ -210,42 +210,67 @@ function Anchor({ item }) {
   );
 }
 
+// How fast the board drifts compared with the page (0.2 = one fifth of the scroll speed).
+// The slow drift makes it read clearly as a background layer while still revealing
+// new scripture as you scroll.
+const DRIFT = 0.2;
+
 /**
- * `full` renders the board on its own (the /?wallpaper view).
- * Otherwise it sits behind the whole site and scrolls with the page.
+ * `full` renders the board on its own (the /?wallpaper view), scrolling normally.
+ * Otherwise it is fixed behind the whole site and drifts slowly as you scroll.
  */
 export default function ScriptureBackdrop({ full = false }) {
   const items = useMemo(buildBoard, []);
   const texture = useMemo(buildTexture, []);
+  const layer = useRef(null);
+
+  useEffect(() => {
+    if (full) return;
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    // A single transform write per scroll event is cheap (GPU-composited layer).
+    const update = () => {
+      const y = reduceMotion ? 0 : -Math.round(window.scrollY * DRIFT);
+      if (layer.current) layer.current.style.transform = `translate3d(0, ${y}px, 0)`;
+    };
+    update();
+    window.addEventListener("scroll", update, { passive: true });
+    window.addEventListener("resize", update);
+    return () => {
+      window.removeEventListener("scroll", update);
+      window.removeEventListener("resize", update);
+    };
+  }, [full]);
 
   return (
     <div
       aria-hidden="true"
       className={`select-none overflow-hidden bg-charcoal ${
-        full ? "relative min-h-screen" : "pointer-events-none absolute inset-0 -z-10"
+        full ? "relative min-h-screen" : "pointer-events-none fixed inset-0 -z-10"
       }`}
     >
-      {/* Gap filler: continuous handwritten scripture */}
-      <p
-        className={`absolute inset-0 break-words p-2 font-script text-[15px] leading-[1.15] text-zinc-400 ${
-          full ? "opacity-[0.28]" : "opacity-[0.10]"
-        }`}
-      >
-        {texture}
-      </p>
+      <div ref={layer} className="relative will-change-transform">
+        {/* Gap filler: continuous handwritten scripture */}
+        <p
+          className={`absolute inset-0 break-words p-2 font-script text-[15px] leading-[1.15] text-zinc-400 ${
+            full ? "opacity-[0.28]" : "opacity-[0.04]"
+          }`}
+        >
+          {texture}
+        </p>
 
-      <div className={`relative backdrop-columns px-3 py-4 ${full ? "" : "opacity-[0.24]"}`}>
-        {items.map((item, i) => (
-          <div key={i} className="@container mb-3 break-inside-avoid break-words px-1.5">
-            {item.kind === "deco" && <Deco kind={item.deco} />}
-            {item.kind === "anchor" && <Anchor item={item} />}
-            {item.kind === "verse" && <Verse item={item} />}
-          </div>
-        ))}
+        <div className={`relative backdrop-columns px-3 py-4 ${full ? "" : "opacity-[0.10]"}`}>
+          {items.map((item, i) => (
+            <div key={i} className="@container mb-3 break-inside-avoid break-words px-1.5">
+              {item.kind === "deco" && <Deco kind={item.deco} />}
+              {item.kind === "anchor" && <Anchor item={item} />}
+              {item.kind === "verse" && <Verse item={item} />}
+            </div>
+          ))}
+        </div>
       </div>
 
-      {/* Slight darkening so page content stays readable */}
-      {!full && <div className="absolute inset-0 bg-ink/25" />}
+      {/* Darkening so page content stays readable */}
+      {!full && <div className="absolute inset-0 bg-ink/40" />}
     </div>
   );
 }

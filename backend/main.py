@@ -55,19 +55,81 @@ APP_VERSION = "2.0.0"
 SAST = timezone(timedelta(hours=2))  # South Africa has no daylight saving
 
 # ---------------------------------------------------------------------------
-# Fuel prices (ZAR per litre)
-# Indicative retail prices. Update monthly after the official fuel price
-# announcement (usually effective the first Wednesday of the month), and
-# mirror the numbers in frontend/src/components/FuelCalculator.jsx.
+# Fuel prices (ZAR per litre) — live official prices
+# South African fuel prices are regulated and change monthly (usually the first
+# Wednesday). We read the official figures published by the Automobile
+# Association of South Africa (aa.co.za/fuel-pricing), cache them for a few
+# hours, and fall back to the last known prices below if AA can't be reached.
+# Keep FALLBACK_* in sync with FALLBACK_PRICES in FuelCalculator.jsx.
 # ---------------------------------------------------------------------------
-FUEL_PRICES_EFFECTIVE = "2026-11-04"
+AA_FUEL_URL = "https://aa.co.za/wp-admin/admin-ajax.php"
+FUEL_CACHE_SECONDS = 6 * 60 * 60
 
-FUEL_PRICES = [
-    {"id": "inland-95", "label": "Inland 95 Unleaded", "price_per_litre": 21.62, "region": "Inland (Gauteng)"},
-    {"id": "inland-93", "label": "Inland 93 Unleaded", "price_per_litre": 21.51, "region": "Inland (Gauteng)"},
-    {"id": "coastal-95", "label": "Coastal 95 Unleaded", "price_per_litre": 20.79, "region": "Coastal"},
-    {"id": "diesel-50ppm", "label": "Diesel 50ppm", "price_per_litre": 19.95, "region": "Inland (wholesale guide)"},
+# (id, label, region, fuel, AA field name)
+FUEL_GRADES = [
+    ("inland-95", "Unleaded 95", "inland", "95", "unleaded95Inland"),
+    ("inland-93", "Unleaded 93", "inland", "93", "unleaded93Inland"),
+    ("inland-d50", "Diesel 50ppm", "inland", "d50", "diesel50Inland"),
+    ("inland-d500", "Diesel 500ppm", "inland", "d500", "diesel500Inland"),
+    ("coastal-95", "Unleaded 95", "coastal", "95", "unleaded95Coast"),
+    ("coastal-93", "Unleaded 93", "coastal", "93", "unleaded93Coast"),
+    ("coastal-d50", "Diesel 50ppm", "coastal", "d50", "diesel50Coast"),
+    ("coastal-d500", "Diesel 500ppm", "coastal", "d500", "diesel500Coast"),
 ]
+
+FALLBACK_EFFECTIVE = "2026-11-04"
+FALLBACK_PRICES = {
+    "unleaded95Inland": 30.24, "unleaded93Inland": 29.87, "diesel50Inland": 31.60, "diesel500Inland": 30.85,
+    "unleaded95Coast": 29.37, "unleaded93Coast": 29.08, "diesel50Coast": 30.83, "diesel500Coast": 29.98,
+}
+
+_fuel_cache: dict = {"data": None, "fetched": 0.0}
+
+
+def _build_fuel_payload(current: dict, previous: dict | None, effective: str, live: bool) -> dict:
+    prices = []
+    for gid, label, region, fuel, field in FUEL_GRADES:
+        price = float(current[field])
+        change = round(price - float(previous[field]), 2) if previous and previous.get(field) else None
+        prices.append({
+            "id": gid,
+            "label": label,
+            "region": region,
+            "fuel": fuel,
+            "price_per_litre": price,
+            "change_from_last_month": change,
+        })
+    return {
+        "currency": "ZAR",
+        "unit": "per_litre",
+        "effective_date": effective,
+        "live": live,
+        "source": "Automobile Association of South Africa (aa.co.za) — official regulated prices"
+        if live else "Last known official prices (live source unavailable)",
+        "note": "Petrol prices are regulated retail prices. Diesel figures are official wholesale prices; pumps may differ slightly.",
+        "prices": prices,
+    }
+
+
+async def get_fuel_prices() -> dict:
+    now = time.monotonic()
+    if _fuel_cache["data"] and now - _fuel_cache["fetched"] < FUEL_CACHE_SECONDS:
+        return _fuel_cache["data"]
+    try:
+        async with httpx.AsyncClient(timeout=15, headers={"User-Agent": "iammasterheavenly-fuel-calculator/1.0"}) as http:
+            r = await http.post(AA_FUEL_URL, data={"action": "getFuelPricesStart"})
+            r.raise_for_status()
+            rows = r.json()[0]["prices"]["fuelPrices"]
+        rows = sorted(rows, key=lambda row: row["updatedOn"], reverse=True)
+        current, previous = rows[0], (rows[1] if len(rows) > 1 else None)
+        payload = _build_fuel_payload(current, previous, current["updatedOn"], live=True)
+        _fuel_cache.update(data=payload, fetched=now)
+        return payload
+    except Exception as e:  # network error, layout change, etc.
+        log.warning("Live fuel prices unavailable, using fallback: %s", e)
+        if _fuel_cache["data"]:
+            return _fuel_cache["data"]  # last successful live fetch
+        return _build_fuel_payload(FALLBACK_PRICES, None, FALLBACK_EFFECTIVE, live=False)
 
 # ---------------------------------------------------------------------------
 # Scripture of the Day
@@ -255,15 +317,9 @@ def health():
 
 
 @app.get("/api/fuel-prices")
-def fuel_prices():
-    """Default South African fuel prices in ZAR per litre."""
-    return {
-        "currency": "ZAR",
-        "unit": "per_litre",
-        "effective_date": FUEL_PRICES_EFFECTIVE,
-        "source": "Indicative retail prices — confirm against the official monthly announcement.",
-        "prices": FUEL_PRICES,
-    }
+async def fuel_prices():
+    """Current official South African fuel prices in ZAR per litre (inland and coastal)."""
+    return await get_fuel_prices()
 
 
 @app.get("/api/scripture/today")
